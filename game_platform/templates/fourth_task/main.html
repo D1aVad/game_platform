@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href='{% static "stile.css" %}'>
+    <link rel="stylesheet" href="href="{% static "vesta.png" %}">">
+</head>
+<body>
+    {% csrf_token %}
+    <nav>
+        <div class="logo">KHIDIROV</div>
+        <ul>
+            <li><a href="http://127.0.0.1:8000/" class=".top-right">Главная страница</a></li>
+            <li><a href="http://127.0.0.1:8000/sail">Улучшения</a></li>
+            <li><a href="http://127.0.0.1:8000/register">Регистрация</a></li>
+            <li>Контакты</li>
+        </ul>
+    </nav>
+
+    <header>
+        {% block pagename %}
+            <h1> Заголовок страницы</h1>
+        {% endblock %}
+    </header>
+    <nav>
+        {% block menu %}
+           
+        {% endblock %}
+    </nav>
+
+    <main>
+        {% block content %}
+            <p>контент страницы</p>
+            <img src="sda.gif" alt="a">
+        {% endblock %}
+    </main>
+
+</body>
+</html>

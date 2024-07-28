@@ -1,0 +1,21 @@
+{% extends "fourth_task/main.html" %}
+
+{% block pagename %}
+    <h1>Главная страница</h1>
+{% endblock %}
+
+{% block menu %}
+    {{ block.super }}
+{% endblock %}
+
+{% block content %}
+    <main>
+        <img src="/img/vesta.png" alt="a">
+        <div class="h1">New Lada VESTA</div>
+        <div class="price">Всего от 1.200.000р</div>
+        <div class="btn-cont">
+            <div class="btn-m">Other</div>
+            <button>КУпить</button>
+        </div>
+    </main>
+{% endblock %}
